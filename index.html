@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation_DApp</title>
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self';
+                  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.jsdelivr.net;
+                  connect-src *;
+                  frame-src 'self' https://*.metamask.io;
+                  img-src 'self' data: https:;
+                  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="home">
+        <div class="logo">Let's Make a Help Today</div>
+    </header>
+    <div class="container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2 class="hero-title">Make a Difference Today</h2>
+                <p class="hero-description"><b>Your contribution can change lives. Join us in creating a better world through transparent, blockchain-powered donations.</b></p>
+              <button id="donateBtn" class="btn-primary donate-trigger">
+                    <i class="fas fa-heart"></i> Donate Now
+                </button>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-globe-americas"></i>
+            </div>
+        </section>
+
+        <!-- Popup for donation -->
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content">
+                <span class="close-btn" id="closeBtn">&times;</span>
+                <div class="donation-form">
+                    <header class="app-header">
+                        <h1><i class="fas fa-hand-holding-heart"></i> DonateChain</h1>
+                        <div class="wallet-section">
+                            <button id="connectButton" class="btn-connect">
+                                <i class="fas fa-wallet"></i> Connect Wallet
+                            </button>
+                            <div id="walletAddress" class="wallet-info"></div>
+                        </div>
+                    </header>
+
+                    <main class="main-content">
+                        <section class="donation-section">
+                            <div class="card">
+                                <h2><i class="fas fa-donate"></i> Make a Donation</h2>
+                                <form id="donationForm" class="donation-form">
+                                    <div class="input-group">
+                                        <label for="amount">Amount (ETH)</label>
+                                        <div class="eth-input">
+                                            <input type="number" id="amount" placeholder="0.0" step="any" required>
+                                            <span class="eth-symbol">ETH</span>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn-donate">
+                                        <i class="fas fa-heart"></i> Donate Now
+                                    </button>
+                                </form>
+                            </div>
+                        </section>
+
+                        <section class="history-section">
+                            <div class="card">
+                                <h2><i class="fas fa-history"></i> Recent Donations</h2>
+                                <div id="donationHistory" class="donation-history">
+                                    <!-- Donation history will be populated here -->
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <section class="impact-section">
+            <h2>Your Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Provide Food</h3>
+                    <p>Help provide nutritious meals to those in need</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Support Education</h3>
+                    <p>Enable access to quality education for children</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Medical Aid</h3>
+                    <p>Support essential healthcare services</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <blockquote>
+                    "Thanks to the generous donations, we've been able to provide education to over 100 children in our community. The transparency of blockchain technology has helped build trust with our donors."
+                </blockquote>
+                <div class="testimonial-author">
+                    <p>- S.K.B</p>
+                    <p class="author-title">Community Leader</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <p>Powered by Ethereum Blockchain</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Load Ethers.js first -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
+    <!-- Then your app.js -->
+    <script src="app.js"></script>
+</body>
+</html>
