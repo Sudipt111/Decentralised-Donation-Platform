@@ -22,7 +22,6 @@ A blockchain-based donation platform where users can donate funds securely using
 - Solidity
 - Web3.js
 - HTML, CSS, JavaScript
-- Node.js
 
 ## Homepage
 
