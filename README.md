@@ -24,6 +24,10 @@ A blockchain-based donation platform where users can donate funds securely using
 - HTML, CSS, JavaScript
 - Node.js
 
+## Homepage
+
+![Home Page](docs/homepage.png)
+
 ## Contact
 - [Sudipta Kumar Bhoi](https://github.com/Sudipt111)
 ﻿# Donation DApp
